@@ -1,0 +1,18 @@
+{
+  "name": "grawl.ru",
+  "version": "0.1.0",
+  "description": "Личный сайт Даниила Пронина",
+  "repository": "https://github.com/Grawl/grawl.ru.git",
+  "bugs": "https://github.com/Grawl/grawl.ru/issues",
+  "homepage": "https://grawl.ru",
+  "main": "index.html",
+  "scripts": {
+    "serve": "harp server & browser-sync start --proxy 'localhost:9000' --no-open --files '*.jade, templates/**/*.jade, *.sass, styles/**/*.sass, *.scss, styles/**/*.scss, *.json'"
+  },
+  "author": "Даниил «Grawl» Пронин <mail@grawl.ru>",
+  "license": "WTFPL",
+  "dependencies": {
+    "browser-sync": "^2.7.1",
+    "harp": "^0.17.0"
+  }
+}
