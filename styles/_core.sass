@@ -1,0 +1,27 @@
+html
+	font:
+		family: 'Fira Sans', sans-serif
+		weight: 300
+%heading
+	font:
+		weight: 300
+h1
+	@extend %heading
+	font:
+		size: 2.3em
+h2
+	@extend %heading
+a:not(:hover)
+	text:
+		decoration: none
+hr
+	border:
+		style: solid
+		width: 0
+		top-width: 1px
+.list
+	&-inline
+		&-item
+			display: inline-block
+			&:not(:last-of-type)
+				margin-right: 1em
