@@ -16,4 +16,4 @@ npm run serve
 
 Built with [`harp.js`](http://harpjs.com/).
 
-See `package.json` and `bower.json` to see what I'm using to build this simple page.
+See `package.json` to see what I'm using to build this simple page.
