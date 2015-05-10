@@ -2,8 +2,8 @@
   "name": "grawl.ru",
   "version": "0.1.0",
   "description": "Личный сайт Даниила Пронина",
-  "repository": "https://github.com/Grawl/grawl.ru.git",
-  "bugs": "https://github.com/Grawl/grawl.ru/issues",
+  "repository": "https://github.com/Grawl/grawl.github.io",
+  "bugs": "https://github.com/Grawl/grawl.github.io/issues",
   "homepage": "https://grawl.ru",
   "main": "index.html",
   "scripts": {
