@@ -6,9 +6,6 @@
   "bugs": "https://github.com/Grawl/grawl.github.io/issues",
   "homepage": "https://grawl.ru",
   "main": "index.html",
-  "scripts": {
-    "serve": "harp server & browser-sync start --proxy 'localhost:9000' --no-open --files '*.jade, templates/**/*.jade, *.sass, styles/**/*.sass, *.scss, styles/**/*.scss, *.json'"
-  },
   "author": "Даниил «Grawl» Пронин <mail@grawl.ru>",
   "license": "WTFPL",
   "dependencies": {
