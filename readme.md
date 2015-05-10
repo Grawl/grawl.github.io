@@ -9,7 +9,13 @@
 ## Run
 
 ```
-npm run serve
+gulp
+```
+
+## Compile
+
+```
+npm run publish
 ```
 
 ## Credits

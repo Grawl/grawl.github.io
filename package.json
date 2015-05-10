@@ -8,6 +8,9 @@
   "main": "index.html",
   "author": "Даниил «Grawl» Пронин <mail@grawl.ru>",
   "license": "WTFPL",
+  "scripts": {
+    "publish": "harp compile public/ www/"
+  },
   "dependencies": {
     "browser-sync": "^2.7.1",
     "harp": "^0.17.0"
