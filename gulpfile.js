@@ -8,7 +8,7 @@ var config = {
 		dir: 'public/'
 	},
 	inject: '{sass,scss,less,styl}',
-	reload: '{jade,coffee,ejs,md,markdown}'
+	reload: '{jade,coffee,ejs,md,markdown,json}'
 };
 gulp.task('serve', function() {
 	config.public.files = config.public.dir + '/**/';
