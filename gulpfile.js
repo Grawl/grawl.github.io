@@ -11,7 +11,7 @@ var config = {
 	reload: '{jade,coffee,ejs,md,markdown,json}'
 };
 gulp.task('serve', function() {
-	config.public.files = config.public.dir + '/**/';
+	config.public.files = config.public.dir + '**/';
 	harp.server(config.public.dir, {
 		port: config.port
 	}, function() {
