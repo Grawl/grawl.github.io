@@ -23,6 +23,10 @@
         "uri" : "ru.linkedin.com/in/grawl",
         "title" : "LinkedIn"
       }
-    ]
+    ],
+    "icons": {
+      "dir": "images/",
+      "file": "icons.svg"
+    }
   }
 }

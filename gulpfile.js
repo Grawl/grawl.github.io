@@ -1,7 +1,10 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
+var gulp = require('gulp'),
+	browserSync = require('browser-sync'),
+	harp = require('harp'),
+	del = require('del'),
+	rename = require('gulp-rename'),
+	fs = require('fs');
 var reload = browserSync.reload;
-var harp = require('harp');
 var config = {
 	port: 8750,
 	public: {
@@ -10,22 +13,22 @@ var config = {
 	inject: '{sass,scss,less,styl}',
 	reload: '{jade,coffee,ejs,md,markdown,json}'
 };
-gulp.task('svg-sprite', function() {
-	require('del')(config.public.dir+'sprite');
+var locals = JSON.parse(fs.readFileSync('public/_data.json')).index;
+gulp.task('pack-svg', function() {
+	var src = 'images',
+		dist = config.public.dir+locals.icons.dir;
+	del(dist);
 	gulp
-		.src(
-			'**/*.svg',
-			{
-				cwd: 'images'
-			}
-		)
+		.src('**/*.svg', {cwd: src})
 		.pipe(
-			require('gulp-svg-sprite')({
-				mode: { symbol: true }
+			require('gulp-svg-symbols')({
+				title: false,
+				templates: ['default-svg']
 			})
 		)
+		.pipe(rename(locals.icons.file))
 		.pipe(
-			gulp.dest(config.public.dir+'sprite')
+			gulp.dest(dist)
 		);
 	}
 );
