@@ -2,6 +2,8 @@ html
 	font:
 		family: 'Fira Sans', sans-serif
 		weight: 300
+body
+	background: $background-body
 %heading
 	font:
 		weight: 300
@@ -28,3 +30,16 @@ hr
 			&:not(:last-of-type)
 				margin:
 					right: 1em
+.icon
+	+square(3em)
+	@media (max-width: 23rem)
+		+square(4.5em)
+	vertical-align: middle
+	border-radius: 100%
+	=foo($bar)
+		@each $brand, $color in $brands
+			&.#{$brand}
+				#{$bar}: $color
+	&:hover
+		fill: $background-body
+		+foo('background-color')

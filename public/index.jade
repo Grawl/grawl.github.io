@@ -10,6 +10,15 @@ main
 		a(href='mailto:mail@grawl.ru') mail@grawl.ru
 	hr
 	ul.list-inline
+		block variables
+			-var sprite="sprite/symbol/svg/sprite.symbol.svg#"
 		each link in links
+			-var id=link.title
 			li.list-inline-item
-				a(href='//'+link.uri target='_blank')=link.title
+				a(
+				href='//'+link.uri
+				target='_blank'
+				title=id
+				)
+					svg.icon(class=id)
+						use(xlink:href=sprite+id)

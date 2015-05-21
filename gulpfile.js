@@ -10,6 +10,25 @@ var config = {
 	inject: '{sass,scss,less,styl}',
 	reload: '{jade,coffee,ejs,md,markdown,json}'
 };
+gulp.task('svg-sprite', function() {
+	require('del')(config.public.dir+'sprite');
+	gulp
+		.src(
+			'**/*.svg',
+			{
+				cwd: 'images'
+			}
+		)
+		.pipe(
+			require('gulp-svg-sprite')({
+				mode: { symbol: true }
+			})
+		)
+		.pipe(
+			gulp.dest(config.public.dir+'sprite')
+		);
+	}
+);
 gulp.task('serve', function() {
 	config.public.files = config.public.dir + '**/';
 	harp.server(config.public.dir, {

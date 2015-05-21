@@ -1,0 +1,6 @@
+{
+  "name": "-",
+  "dependencies": {
+    "brand-colors": "~0.4.0"
+  }
+}
