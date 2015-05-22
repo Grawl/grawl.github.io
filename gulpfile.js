@@ -10,16 +10,17 @@ var config = {
 	public: {
 		dir: 'public/'
 	},
+	icons: 'images/**/*.svg',
 	inject: '{sass,scss,less,styl}',
 	reload: '{jade,coffee,ejs,md,markdown,json}'
 };
 var locals = JSON.parse(fs.readFileSync('public/_data.json')).index;
-gulp.task('pack-svg', function() {
-	var src = 'images',
+function pack_svg() {
+	var src = config.icons,
 		dist = config.public.dir+locals.icons.dir;
 	del(dist);
 	gulp
-		.src('**/*.svg', {cwd: src})
+		.src(src)
 		.pipe(
 			require('gulp-svg-symbols')({
 				title: false,
@@ -30,8 +31,8 @@ gulp.task('pack-svg', function() {
 		.pipe(
 			gulp.dest(dist)
 		);
-	}
-);
+}
+gulp.task('pack-svg', pack_svg);
 gulp.task('serve', function() {
 	config.public.files = config.public.dir + '**/';
 	harp.server(config.public.dir, {
@@ -57,6 +58,11 @@ gulp.task('serve', function() {
 		], function() {
 			reload();
 		});
-	})
+	});
+	pack_svg(gulp, config, del, rename, locals);
+	gulp.watch(
+		config.icons,
+		['pack-svg']
+	)
 });
 gulp.task('default', ['serve']);
