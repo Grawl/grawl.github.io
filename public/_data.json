@@ -24,9 +24,9 @@
         "title" : "LinkedIn"
       }
     ],
-    "icons": {
-      "dir": "images/",
-      "file": "icons.svg"
+    "icons" : {
+      "dir" : "images/",
+      "file" : "icons.svg"
     }
   }
 }
