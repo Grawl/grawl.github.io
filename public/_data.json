@@ -5,23 +5,28 @@
     "links" : [
       {
         "uri" : "twitter.com/grawlcore",
-        "title" : "Twitter"
+        "title" : "Twitter",
+        "image": "Twitter"
       },
       {
         "uri" : "fb.me/grawlcore",
-        "title" : "Facebook"
+        "title" : "Facebook",
+        "image": "Facebook"
       },
       {
         "uri" : "vk.com/grawl",
-        "title" : "ВКонтакте"
+        "title" : "ВКонтакте",
+        "image": "VK"
       },
       {
         "uri" : "github.com/grawl",
-        "title" : "Github"
+        "title" : "Github",
+        "image": "Github"
       },
       {
         "uri" : "ru.linkedin.com/in/grawl",
-        "title" : "LinkedIn"
+        "title" : "LinkedIn",
+        "image": "LinkedIn"
       }
     ],
     "icons" : {
