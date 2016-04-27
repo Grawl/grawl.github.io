@@ -1,7 +1,0 @@
-[*.json]
-indent_style = space
-indent_size = 2
-
-[{*.{sass,scss,jade}, styles/**/*.{sass,scss}, templates/**/*.jade}]
-indent_style = tab
-indent_size = 4

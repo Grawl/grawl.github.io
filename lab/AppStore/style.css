@@ -1,0 +1,274 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+html {
+  font-family: sans-serif;
+  min-width: 1024px;
+}
+body {
+  margin: 1em auto;
+  width: 940px;
+  background: url("images/AppStoreBackground.jpeg") repeat-x #f7f8f9;
+}
+body::before {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.2);
+  padding: 0.5em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+}
+.pane {
+  display: inline-block;
+  width: 100%;
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.2), 0 2px 3px -1px rgba(0,0,0,0.4);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2), 0 2px 3px -1px rgba(0,0,0,0.4);
+  border: 1px solid #cacacc;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.pane a {
+  text-decoration: none;
+}
+.pane header {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #f4f4f4), color-stop(0.51, #ededed), color-stop(1, #e3e3e3));
+  background: -webkit-linear-gradient(top, #fff 0%, #f4f4f4 50%, #ededed 51%, #e3e3e3 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #f4f4f4 50%, #ededed 51%, #e3e3e3 100%);
+  background: -o-linear-gradient(top, #fff 0%, #f4f4f4 50%, #ededed 51%, #e3e3e3 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #f4f4f4 50%, #ededed 51%, #e3e3e3 100%);
+  background: linear-gradient(top, #fff 0%, #f4f4f4 50%, #ededed 51%, #e3e3e3 100%);
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #b5b5b5;
+  padding: 0.4em 0.6em 0.6em;
+}
+.pane header>* {
+  display: inline-block;
+  color: #53565e;
+  font-family: "Helvetica Neue";
+}
+.pane header h3 {
+  font-size: 1em;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: 500;
+}
+.pane header a {
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.pane header a .rightarrow {
+  font-family: 'Consolas';
+  font-weight: 800;
+}
+#apps {
+  overflow: hidden;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: -1px;
+}
+.app {
+  width: 25%;
+  float: left;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d9d9d9;
+  background: #fff;
+}
+.app:not(:nth-child(4n)) {
+  border-right: 1px solid #d9d9d9;
+}
+.app:not(:nth-child(4n+1)) {
+  border-left: 1px solid #fff;
+}
+.app:nth-child(5),
+.app:nth-child(6),
+.app:nth-child(7),
+.app:nth-child(8),
+.app:nth-child(13),
+.app:nth-child(14),
+.app:nth-child(15),
+.app:nth-child(16),
+.app:nth-child(21),
+.app:nth-child(22),
+.app:nth-child(23),
+.app:nth-child(24),
+.app:nth-child(29),
+.app:nth-child(30),
+.app:nth-child(31),
+.app:nth-child(32) {
+  background: #f0f0f0;
+}
+.app .icon {
+  width: 64px;
+  height: 64px;
+  float: left;
+  margin-right: 10px;
+}
+.app .meta {
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
+.app .meta > *:not(:last-child) {
+  margin-bottom: 0.4em;
+}
+.app .meta h1.name a {
+  font-weight: bold;
+  color: #000;
+}
+.app .meta h2.category {
+  color: #747474;
+  font-size: 0.9em;
+}
+.app .download {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #fdfdfd;
+  text-shadow: 0 -1px 0 #7b7d81;
+  background: #9c9ea4;
+  border: 1px solid #8c8d90;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  padding: 1px 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+.app .download:hover {
+  background: #878289;
+}
+@media (max-width: 1024px) {
+  .pane {
+    width: 1000px;
+    padding: 0 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .pane::before {
+    content: '< 1024';
+  }
+}
+@media (min-width: 1440px) {
+  .pane {
+    width: 1400px;
+    padding: 0 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .pane::before {
+    content: '> 1440';
+  }
+  .app {
+    width: 223px;
+  }
+}
+@media (min-width: 1680px) {
+  .pane {
+    width: 1600px;
+    padding: 0 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .pane::before {
+    content: '> 1680';
+  }
+  .app {
+    width: 220px;
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Крепость Владивостокъ к 1916 году</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<!--
+			Подключаем API карт 2.x
+			Параметры:
+			- load=package.full - полная сборка;
+				- lang=ru-RU - язык русский.
+		-->
+		<script
+			src="http://api-maps.yandex.ru/2.0/?load=package.full,projection.Cartesian&lang=ru-RU"
+			type="text/javascript"></script>
+		<script type="text/javascript">
+			// Как только будет загружен API и готов DOM, выполняем инициализацию
+			ymaps.ready(init);	
+			function init () {
+				// Создаем декартову систему координат, в которой будет работать карта.
+				// Определяем границы области отображения в декартовых координатах.
+				var myCoordSystem = new ymaps.projection.Cartesian([
+						// Координаты левого нижнего угла "мира"
+						[-1, -1],
+						// Координаты правого верхнего угла "мира"
+						[1, 1]
+					]),
+					// Создадим собственный слой карты:
+					PhotoLayer = function () {
+						return new ymaps.Layer(
+							// Зададим функцию, преобразующую номер тайла и уровень масштабировая
+							// в URL до тайла на нашем хостинге
+							function (tile, zoom) {
+								return "tiles/" + zoom + "_" + tile[0] + "_" + tile[1] + ".jpg";
+							}
+						)
+					};
+				// Добавим конструктор слоя в хранилище слоёв под ключом my#photo
+				ymaps.layer.storage.add('my#photo', PhotoLayer);
+				// Создадим новый тип карты, состоящий только из нашего слоя тайлов,
+				// и добавим его в хранилище типов карты под ключом my#photo
+				ymaps.mapType.storage.add('my#photo', new ymaps.MapType(
+					'Фото',
+					['my#photo']
+				));
+					// Создаем карту в заданной системе координат.
+					// Для того, чтобы был виден пользователький слой карты, устанавливаем ее тип в null.
+				var myMap = new ymaps.Map('map', {
+						center: [0, 0],
+						zoom: 2,
+						type: 'my#photo'
+					}, {
+						maxZoom: 6, // Максимальный коэффициент масштабирования для заданной проекции.
+						minZoom: 0, // Максимальный коэффициент масштабирования
+						projection: myCoordSystem
+					});
+				// Добавим миникарту
+				myMap.controls.add(
+					new ymaps.control.MiniMap({
+						type: 'my#photo'
+					})
+				);
+				// Добавим ползунок масштаба
+				myMap.controls.add(
+					new ymaps.control.ZoomControl({
+						type: 'my#photo',
+						noTips: true
+					})
+				);
+			}
+		</script>
+		<style type="text/css">
+			html, body, #map {
+				height: 100%;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="map"></div>
+	</body>
+</html>

@@ -1,0 +1,133 @@
+@import '../../library/nib'
+@import 'library/mixins'
+@import '../../mixins'
+global-reset()
+html
+	font-family: sans-serif
+body
+	background:	url('../../library/ErrorPageBackgroundTile.png')
+	margin-bottom:	1em
+	&.darkness
+		overflow: hidden
+#branding
+	margin: wrapper
+	text-align: center
+	h1
+		font-size: 4em
+		font-family: 'MetaProBlack'
+		color: hsl(148, 41%, 15%)
+		textShadowColor = hsl(108, 24%, 71%)
+		text-shadow: 0 1px 0 textShadowColor, 0 2px 0 textShadowColor, 0 3px 0 textShadowColor, 0 4px 0 textShadowColor, 0 5px 0 textShadowColor
+		margin-bottom: 0.5em
+		span
+			position: relative
+			&::after
+				pseudoBlock()
+				top: 21%
+				right: -8%
+				width: 120%
+				height: 60%
+				background: hsl(67, 46%, 81%)
+				transform: rotate(5deg)
+				z-index: -1
+#crossposting
+	border-spacing: 0
+	margin: wrapper
+	border: 10px solid hsla(0, 0%, 0%, 0.1)
+	td
+		background: hsl(190, 20%, 92%)
+		border: 1px solid
+		border-bottom-color: hsl(189, 5%, 75%)
+		border-right-color: hsl(187, 9%, 82%)
+		border-left-color: hsl(190, 50%, 98%)
+		border-top-color: hsl(190, 30%, 96%)
+		padding: 5px
+		font-size: 3em
+		line-height: 0.5em
+		text-align: center
+		vertical-align: middle
+	tr
+		&:hover td
+			background: hsl(190, 20%, 95%)
+	thead td
+		background: hsl(193, 10%, 90%)
+	tbody td
+		&:not(:nth-child(1))
+			padding-left: 0
+			font-family: iconFont
+			color: hsla(189, 5%, 25%, 0.3)
+			cursor: default
+			&[onclick]
+				text-shadow: -1px -1px 0 white, 1px 1px 0 black
+				color: hsl(189, 5%, 25%)
+				cursor: pointer
+				&:hover
+					color: hsl(0, 0%, 100%)
+					text-shadow: 0 0 35px blue
+#cboxWrapper
+	margin: -9999px
+	padding: 9999px
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHklEQVQIHWNkYGDYDMQgIMkEoRkkgfRzEAfMAAkCAC+AAtK+33rqAAAAAElFTkSuQmCC')
+#cboxContent
+	background: hsl(0,0%,99%)
+	padding: 1em
+	border: 1px solid white
+	position: relative
+	height: auto
+	& *
+		height: auto
+	.direction
+		text-align: center
+		.meta
+			position: relative
+			font-size: 3em
+			display: inline-block
+			top: -0.4em
+			font-family: iconFont
+	p
+		line-height: 1.5em
+		margin: marginContent
+	ol
+		li
+			list-style: decimal outside
+			margin: marginContent
+			margin-left: 2em
+			line-height: 1.3em
+	#cboxClose
+		position: absolute
+		top: -12px
+		left: -12px
+		font-size: 0
+		cursor: pointer
+		size = 30px
+		width: size
+		height: size
+		&::before
+			pseudoBlock()
+			content: 'x'
+			width: 1em
+			height: 1em
+			font-size: 30px
+			font-family: iconFont
+			background: white
+			border-radius: 50%
+			padding: 1px 0 0 3px
+			box-sizing: border-box
+			z-index: 5
+#legend
+	width: 700px
+	margin: wrapper
+	h1
+		font-size: 2em
+	p
+		line-height: 1.5em
+	.font-icon
+		font-family: iconFont
+		font-size: 2em
+		position: relative
+		top: 0.2em
+		color: hsl(189, 5%, 25%)
+		text-shadow: -1px -1px 0 white, 1px 1px 0 black
+		&.disabled
+			color: hsla(189, 5%, 25%, 0.3)
+			text-shadow: none

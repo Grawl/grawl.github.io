@@ -1,0 +1,44 @@
+@font-face{font-family:'Modern Pictograms';src:url("library/modernpics.otf")}
+@font-face{font-family:'DroidSans';src:url("fonts/droidsans-webfont.ttf") format('truetype');font-weight:normal;font-style:normal}
+@font-face{font-family:'DroidSans';src:url("fonts/droidsans-bold-webfont.ttf") format('truetype');font-weight:bold;font-style:normal}
+@font-face{font-family:'DroidSansMono';src:url("fonts/droidsansmono-webfont.ttf") format('truetype');font-weight:normal;font-style:normal}
+@font-face{font-family:'DroidSerif';src:url("fonts/droidserif-bold-webfont.ttf") format('truetype');font-weight:bold;font-style:normal}
+@font-face{font-family:'DroidSerif';src:url("fonts/droidserif-bolditalic-webfont.ttf") format('truetype');font-weight:bold;font-style:italic}
+@font-face{font-family:'DroidSerif';src:url("fonts/droidserif-italic-webfont.ttf") format('truetype');font-weight:normal;font-style:italic}
+@font-face{font-family:'DroidSerif';src:url("fonts/droidserif-regular-webfont.ttf") format('truetype');font-weight:normal;font-style:normal}
+@font-face{font-family:'HelveticaNeueUltraLight-webfont';src:url("fonts/HelveticaNeue-UltraLight.ttf");font-weight:normal;font-style:normal}
+@font-face{font-family:'HeydingsIconsRegular';src:url("fonts/heydings_icons/heydings_icons-webfont-webfont.eot");src:url("fonts/heydings_icons/heydings_icons-webfont-webfont.eot?#iefix") format('embedded-opentype'),url("fonts/heydings_icons/heydings_icons-webfont-webfont.woff") format('woff'),url("fonts/heydings_icons/heydings_icons-webfont-webfont.ttf") format('truetype'),url("fonts/heydings_icons/heydings_icons-webfont-webfont.svg#HeydingsIconsRegular") format('svg');font-weight:normal;font-style:normal}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-family:inherit;font-size:100%;vertical-align:baseline}
+body{line-height:1;color:#000;background:#fff}
+ol,ul{list-style:none}
+table{border-collapse:separate;border-spacing:0;vertical-align:middle}
+caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
+a img{border:none}
+html{font-family:sans-serif}
+body{background:url("../../library/ErrorPageBackgroundTile.png");margin-bottom:1em;}
+body.darkness{overflow:hidden}
+#branding{margin:1em auto 0;text-align:center;}
+#branding h1{font-size:4em;font-family:'MetaProBlack';color:#173625;text-shadow:0 1px 0 #aac7a3,0 2px 0 #aac7a3,0 3px 0 #aac7a3,0 4px 0 #aac7a3,0 5px 0 #aac7a3;margin-bottom:.5em;}
+#branding h1 span{position:relative;}
+#branding h1 span::after{content:'';display:block;position:absolute;top:21%;right:-8%;width:120%;height:60%;background:#e0e5b8;-webkit-transform:rotate(5deg);-moz-transform:rotate(5deg);transform:rotate(5deg);z-index:-1}
+#crossposting{border-spacing:0;margin:1em auto 0;border:10px solid rgba(0,0,0,0.10);}
+#crossposting td{background:#e7edef;border:1px solid;border-bottom-color:#bcc1c2;border-right-color:#cdd4d5;border-left-color:#f7fcfc;border-top-color:#f2f7f8;padding:5px;font-size:3em;line-height:.5em;text-align:center;vertical-align:middle}
+#crossposting tr:hover td{background:#f0f4f5}
+#crossposting thead td{background:#e3e7e8}
+#crossposting tbody td:not(:nth-child(1)){padding-left:0;font-family:'Modern Pictograms';color:rgba(61,66,67,0.30);cursor:default;}
+#crossposting tbody td:not(:nth-child(1))[onclick]{text-shadow:-1px -1px 0 #fff,1px 1px 0 #000;color:#3d4243;cursor:pointer;}
+#crossposting tbody td:not(:nth-child(1))[onclick]:hover{color:#fff;text-shadow:0 0 35px #00f}
+#cboxWrapper{margin:-9999px;padding:9999px;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHklEQVQIHWNkYGDYDMQgIMkEoRkkgfRzEAfMAAkCAC+AAtK+33rqAAAAAElFTkSuQmCC")}
+#cboxContent{background:#fcfcfc;padding:1em;border:1px solid #fff;position:relative;height:auto;}
+#cboxContent *{height:auto}
+#cboxContent .direction{text-align:center;}
+#cboxContent .direction .meta{position:relative;font-size:3em;display:inline-block;top:-.4em;font-family:'Modern Pictograms'}
+#cboxContent p{line-height:1.5em;margin:.5em 0}
+#cboxContent ol li{list-style:decimal outside;margin:.5em 0;margin-left:2em;line-height:1.3em}
+#cboxContent #cboxClose{position:absolute;top:-12px;left:-12px;font-size:0;cursor:pointer;width:30px;height:30px;}
+#cboxContent #cboxClose::before{content:'';display:block;position:absolute;content:'x';width:1em;height:1em;font-size:30px;font-family:'Modern Pictograms';background:#fff;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;padding:1px 0 0 3px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;z-index:5}
+#legend{width:700px;margin:1em auto 0;}
+#legend h1{font-size:2em}
+#legend p{line-height:1.5em}
+#legend .font-icon{font-family:'Modern Pictograms';font-size:2em;position:relative;top:.2em;color:#3d4243;text-shadow:-1px -1px 0 #fff,1px 1px 0 #000;}
+#legend .font-icon.disabled{color:rgba(61,66,67,0.30);text-shadow:none}

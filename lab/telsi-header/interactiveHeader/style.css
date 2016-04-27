@@ -1,0 +1,87 @@
+
+/* line 1 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/mixins.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/mixins\.styl}line{font-family:\000031}}
+
+/* line 6 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/prefix-free.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/prefix-free\.styl}line{font-family:\000036}}
+
+/* line 3 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\000033}}
+#interactiveHeader{width:862px;margin:0 auto}
+
+/* line 6 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\000036}}
+#menu{position:relative;}
+
+/* line 10 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000310}}
+#menu ul{background:#fa7500;margin:0 0 3px;padding:0;width:862px;height:50px;}
+
+/* line 16 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000316}}
+#menu ul li{float:left;color:#fff;height:39px;padding:5px 0 10px 6px;padding-right:0;width:137px;list-style:none;text-transform:uppercase;cursor:pointer;}
+
+/* line 26 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000326}}
+#menu ul li span{display:block;width:100%;height:100%;border-right:1px solid #fff}
+
+/* line 31 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000331}}
+#menu ul li:hover{background:url("img/menu-arrow.png") no-repeat 97% .8em}
+
+/* line 33 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000333}}
+#menu ul li:last-child span{border:0}
+
+/* line 35 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000335}}
+#menu ul li .highlight{display:none;position:absolute;top:53px;left:0;z-index:700;color:#000;text-transform:none;}
+
+/* line 43 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000343}}
+#menu ul li .highlight .spotlight{position:absolute;top:0;left:0;height:100px;width:100%;background:url("img/description-arrow.png") no-repeat 26% 1.4em,-webkit-linear-gradient(top, hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.9));background:url("img/description-arrow.png") no-repeat 26% 1.4em,-moz-linear-gradient(top, hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.9));background:url("img/description-arrow.png") no-repeat 26% 1.4em,-ms-linear-gradient(top, hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.9));background:url("img/description-arrow.png") no-repeat 26% 1.4em,-o-linear-gradient(top, hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.9));background:url("img/description-arrow.png") no-repeat 26% 1.4em,linear-gradient(top, hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.9));font-size:1.6em;}
+
+/* line 51 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000351}}
+#menu ul li .highlight .spotlight h1{float:left;font-style:italic;font-weight:normal;font-size:1.1em;width:20%;vertical-align:middle;padding-right:0;padding-top:1.5em;line-height:1.2em}
+
+/* line 61 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000361}}
+#menu ul li .highlight .spotlight p{float:right;width:66%;padding-left:0;font-size:.9em}
+
+/* line 66 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000366}}
+#menu ul li .highlight .spotlight>*{margin:0;padding:1em 2em}
+
+/* line 69 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000369}}
+
+/* line 70 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000370}}
+#menu ul:hover li{color:#fdba7e;}
+
+/* line 72 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000372}}
+#menu ul:hover li:hover{color:#fff;}
+
+/* line 74 : /Users/grawl/Sites/Ark/www/lab/telsi-header/interactiveHeader/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/Users\/grawl\/Sites\/Ark\/www\/lab\/telsi-header\/interactiveHeader\/style\.styl}line{font-family:\0000374}}
+#menu ul:hover li:hover::before{content:'';display:block;position:absolute;border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #fff;top:53px;z-index:701}

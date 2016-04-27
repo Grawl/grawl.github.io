@@ -1,0 +1,78 @@
+@import 'mixins'
+@import 'prefix-free'
+#interactiveHeader
+	width	interactiveHeaderWidth
+	margin	0 auto
+#menu
+	position	relative
+	menuHeight = 50px
+	menuMargin = 3px
+	ul
+		background	hsl(28, 100%, 49%)
+		margin	0 0 menuMargin
+		padding	0
+		width	interactiveHeaderWidth
+		height	menuHeight
+		li
+			float	left
+			color	white
+			height	39px
+			padding	5px 0 10px 6px
+			padding-right	0
+			width	137px
+			list-style	none
+			text-transform	uppercase
+			cursor	pointer
+			span
+				display	block
+				width	100%
+				height	100%
+				border-right	1px solid white
+			&:hover
+				background	url('img/menu-arrow.png') no-repeat 97% 0.8em
+			&:last-child span
+				border	0
+			.highlight
+				display	none
+				position	absolute
+				top	menuHeight + menuMargin
+				left	0
+				z-index	700
+				color	black
+				text-transform	none
+				.spotlight
+					position	absolute
+					top	0
+					left	0
+					height	100px
+					width	100%
+					background	url('img/description-arrow.png') no-repeat 26% 1.4em, linear-gradient(top,hsla(0, 0%, 100%, 0.7),hsla(0, 0%, 100%, 0.9))
+					font-size	1.6em
+					h1
+						float	left
+						font-style	italic
+						font-weight	normal
+						font-size	1.1em
+						width	20%
+						vertical-align	middle
+						padding-right	0
+						padding-top	1.5em
+						line-height	1.2em
+					p
+						float	right
+						width	66%
+						padding-left	0
+						font-size	0.9em
+					&>*
+						margin	0
+						padding	1em 2em
+		&:hover
+			li
+				color	#fdba7e
+				&:hover
+					color	white
+					&::before
+						size = 10px
+						triangle-bottom(size, white)
+						top	menuHeight + menuMargin
+						z-index	701

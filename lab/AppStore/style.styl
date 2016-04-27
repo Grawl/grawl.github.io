@@ -1,0 +1,136 @@
+@import 'nib'
+global-reset()
+html
+	font-family	sans-serif
+	min-width	1024px
+body
+	margin	1em auto
+	width	940px
+	background	url('images/AppStoreBackground.jpeg') repeat-x #f7f8f9
+	&::before
+		display	block
+		position	absolute
+		top	10px
+		right	10px
+		background	rgba(0, 0, 0, 0.2)
+		padding	0.5em
+		border-radius	0.3em
+$outerRadius = 6px
+$innerRadius = $outerRadius - 1
+.pane
+	display	inline-block
+	width	100%
+	box-shadow	0 0 2px rgba(0, 0, 0, 0.2), 0 2px 3px -1px rgba(0, 0, 0, 0.4)
+	border	1px solid #CACACC
+	border-radius	$outerRadius
+	overflow	hidden
+	a
+		text-decoration	none
+	header
+		background	linear-gradient(top, #ffffff 0%,#f4f4f4 50%,#ededed 51%,#e3e3e3 100%)
+		border-radius	$innerRadius $innerRadius 0 0
+		border-bottom	1px solid #b5b5b5
+		padding	0.4em 0.6em 0.6em
+		&>*
+			display	inline-block
+			color	#53565E
+			font-family	"Helvetica Neue"
+		h3
+			font-size	1em
+			text-shadow	0 1px 0 white
+			font-weight	500
+		a
+			font-size	0.7em
+			font-weight	600
+			.rightarrow
+				font-family	'Consolas'
+				font-weight	800
+#apps
+	overflow	hidden
+	border-radius	0 0 5px 5px
+	margin-bottom	-1px
+.app
+	width	25%
+	float	left
+	padding	1em
+	box-sizing	border-box
+	border-bottom	1px solid #d9d9d9
+	&:not(:nth-child(4n))
+		border-right	1px solid #d9d9d9
+	&:not(:nth-child(4n+1))
+		border-left	1px solid white
+	background	white
+	&:nth-child(5)
+	&:nth-child(6)
+	&:nth-child(7)
+	&:nth-child(8)
+	&:nth-child(13)
+	&:nth-child(14)
+	&:nth-child(15)
+	&:nth-child(16)
+	&:nth-child(21)
+	&:nth-child(22)
+	&:nth-child(23)
+	&:nth-child(24)
+	&:nth-child(29)
+	&:nth-child(30)
+	&:nth-child(31)
+	&:nth-child(32)
+		background	#f0f0f0
+	.icon
+		width	64px
+		height	64px
+		float	left
+		margin-right	10px
+	.meta
+		font-size	0.8em
+		margin-top	0.5em
+		& > *:not(:last-child)
+			margin-bottom	0.4em
+		h1.name
+			a
+				font-weight	bold
+				color	black
+		h2.category
+			color	#747474
+			font-size	0.9em
+	.download
+		font-family	sans-serif
+		font-weight	bold
+		font-size	9px
+		text-transform	uppercase
+		color	#fdfdfd
+		text-shadow	0 -1px 0 #7b7d81
+		background	#9c9ea4
+		border	1px solid #8c8d90
+		border-radius	20px
+		padding	1px 5px
+		text-decoration	none
+		display	inline-block
+		&:hover
+			background	#878289
+@media (max-width: 1024px)
+	.pane
+		width	1000px
+		padding	0 30px
+		box-sizing	border-box
+		&::before
+			content	'< 1024'
+@media (min-width: 1440px)
+	.pane
+		width	1400px
+		padding	0 30px
+		box-sizing	border-box
+		&::before
+			content	'> 1440'
+	.app
+		width	223px
+@media (min-width: 1680px)
+	.pane
+		width	1600px
+		padding	0 30px
+		box-sizing	border-box
+		&::before
+			content	'> 1680'
+	.app
+		width	220px

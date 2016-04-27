@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Telsi Header</title>
+	<link rel="stylesheet" href="interactiveHeader/slides.jquery.css">
+	<link rel="stylesheet" href="interactiveHeader/style.css">
+	<script src="interactiveHeader/jquery.min.js"></script>
+	<script src="interactiveHeader/slides.min.jquery.js"></script>
+	<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'interactiveHeader/img/loading.gif',
+				effect: 'fade',
+				crossfade: true,
+				fadeSpeed: 800,
+				play: 9000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(current){
+					$('.caption').animate({
+						height: 0,
+						bottom: 105
+					}, 400);
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						height: 95,
+						bottom: 60
+					}, 400);
+				},
+				slidesLoaded: function() {
+					$('.caption').animate({
+						height: 95,
+						bottom: 60
+					}, 300);
+					$('#testingUnit').fadeIn();
+				}
+			});
+			$('#menu li').mouseover(function() {
+				$(this).children('.highlight').fadeIn();
+			});
+			$('#menu li').mouseleave(function() {
+				$(this).children('.highlight').fadeOut();
+			});
+			$('#menu').mouseover(function() {
+				$('#slides').fadeOut();
+			});
+			$('#menu').mouseleave(function() {
+				$('#slides').fadeIn();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="interactiveHeader">
+		<div id="menu">
+			<ul>
+				<li onclick="window.location.href='/all-services/shipping/'">
+					<span>Морские перевозки</span>
+					<div class="highlight">
+						<img src="interactiveHeader/img/menu/01.jpg">
+						<div class="spotlight">
+							<h1>Морские перевозки</h1>
+							<p>Компания Тэлси организует морские перевозки всех типов грузов, в том числе наливных и насыпных; организует перевозки судами любого класса, в том числе и перевозки техники на судах класса RO-RO.</p>
+						</div>
+					</div>
+				</li>
+				<li onclick="window.location.href='/all-services/rail-transport/'">
+					<span>Железнодорожные перевозки</span>
+					<div class="highlight" id="testingUnit">
+						<img src="interactiveHeader/img/menu/02.jpg">
+						<div class="spotlight">
+							<h1>Железнодорожные перевозки</h1>
+							<p>Компания Тэлси осуществляет перевозку грузов контейнерами, специальным подвижным составом, перевозку негабаритных грузов на платформе, почтово-багажными и грузовыми вагонами, перевозку опасных и режимных грузов.</p>
+						</div>
+					</div>
+				</li>
+				<li onclick="window.location.href='/all-services/airfreight/'">
+					<span>Авиаперевозки</span>
+					<div class="highlight">
+						<img src="interactiveHeader/img/menu/03.jpg">
+						<div class="spotlight">
+							<h1>Авиаперевозки</h1>
+							<p>Наша главная задача в области авиаперевозок — разработать наилучшее сочетание цена/сроки авиа-доставки. Затем организовать и проконтролировать весь процесс от погрузки до получения груза клиентом.</p>
+						</div>
+					</div>
+				</li>
+				<li onclick="window.location.href='/all-services/trucking/'">
+					<span>Автоперевозки</span>
+					<div class="highlight">
+						<img src="interactiveHeader/img/menu/04.jpg">
+						<div class="spotlight">
+							<h1>Автоперевозки</h1>
+							<p>Компания Тэлси стремится обеспечить автоперевозки с минимальным риском, контролируя каждый этап автодоставки груза. Вы можете быть уверены, что Ваш груз будет доставлен точно в срок.</p>
+						</div>
+					</div>
+				</li>
+				<li onclick="window.location.href='/all-services/multimodal-transport/'">
+					<span>Мультимодальные перевозки</span>
+					<div class="highlight">
+						<img src="interactiveHeader/img/menu/05.jpg">
+						<div class="spotlight">
+							<h1>Мультимодальные перевозки</h1>
+							<p>Компания Тэлси предлагает организацию мульти-модальных перевозок грузов. Мы выбираем оптимальный маршрут следования вашего груза, что позволяет минимизировать транспортные издержки и сократить сроки доставки.</p>
+						</div>
+					</div>
+				</li>
+				<li onclick="window.location.href='/all-services/consolidated-cargoes/'">
+					<span>Сборные грузы</span>
+					<div class="highlight">
+						<img src="interactiveHeader/img/menu/06.jpg">
+						<div class="spotlight">
+							<h1>Сборные грузы</h1>
+							<p>Компания Тэлси всегда рада предоставить Вам наш сервис по перевозке сборных грузов. Мы разрабатываем эффективные логистические схемы, прорабатывая каждый участок маршрута для любых партий груза.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="slides">
+			<div class="slides_container">
+				<div class="slide">
+					<img src="interactiveHeader/img/slide/01.jpg">
+					<div class="caption">
+						<h1>Морские перевозки</h1>
+						<p>Перевозка любых грузов морским путём, в том числе наливных и насыпных. Возможность использовать суда класса RO-RO.</p>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="interactiveHeader/img/slide/05.jpg">
+					<div class="caption">
+						<h1>Железнодорожные перевозки</h1>
+						<p>Перевозка контейнерами, специальным подвижным составом, негабаритных грузов на платформе, почтово-багажными и грузовыми вагонами, опасных грузов.</p>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="interactiveHeader/img/slide/02.jpg">
+					<div class="caption">
+						<h1>Авиаперевозки</h1>
+						<p>Наши задачи: наилучшее сочетание цены и сроков и контроль доставки от погрузки до получения груза.</p>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="interactiveHeader/img/slide/03.jpg">
+					<div class="caption">
+						<h1>Автоперевозки</h1>
+						<p>Минимальный риск, контроль каждого этапа доставки. Вы можете быть уверены, что груз будет доставлен в сохранности и точно в срок.</p>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="interactiveHeader/img/slide/06.jpg">
+					<div class="caption">
+						<h1>Мультимодальные перевозки</h1>
+						<p>Мы выбираем оптимальный маршрут, уменьшая транспортные издержки и сокращая сроки доставки.</p>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="interactiveHeader/img/slide/04.jpg">
+					<div class="caption">
+						<h1>Сборные грузы</h1>
+						<p>Разрабатываем эффективные логистические схемы, прорабатывая каждый участок маршрута для любых партий груза.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

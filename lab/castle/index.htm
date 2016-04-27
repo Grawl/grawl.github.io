@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Крепость Владивостокъ к 1916 году</title>
+	<link rel="stylesheet" href="library/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="library/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top navbar-inner">
+		<span class="brand">Крепость Владивостокъ к 1916 году</span>
+		<div class="btn-group" data-toggle="buttons-radio">
+			<button type="button" id="google" class="btn active">Карты Гуглъ</button>
+			<button type="button" id="yandex" class="btn">Яндексъ.Карты</button>
+		</div>
+	</nav>
+	<iframe id="map" src="google.htm" frameborder="0"></iframe>
+	<script src="library/jquery-1.8.2.min.js"></script>
+	<script src="library/bootstrap/js/bootstrap.min.js"></script>
+	<script>
+		$('.btn').click(function(){
+			$('#map').attr('src', $(this).attr('id')+'.htm');
+		});
+	</script>
+</body>
+</html>

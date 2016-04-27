@@ -1,0 +1,84 @@
+body {
+  font: normal 62.5%/1.5 Helvetica, Arial, sans-serif;
+}
+#slides {
+  position: relative;
+  opacity: 1;
+}
+#slides .slides_container {
+  width: 862px;
+  overflow: hidden;
+  position: relative;
+  display: none;
+  float: left;
+}
+#slides .slides_container .slide {
+  width: 862px;
+  height: 324px;
+  display: block;
+}
+#slides .pagination {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 600;
+  margin: 0;
+  padding: 0;
+}
+#slides .pagination li {
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px 0 0;
+  list-style: none;
+  overflow: hidden;
+  background: #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.5);
+  box-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.5);
+  position: relative;
+}
+#slides .pagination li a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  text-decoration: none;
+  color: #893483;
+}
+#slides .pagination li.current {
+  background: #674db7;
+}
+#slides .pagination li.current a {
+  color: #fff;
+}
+#slides .caption {
+  z-index: 500;
+  position: absolute;
+  bottom: 105px;
+  left: 0;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  background: hsla(288, 78%, 16%, 0.5) url("img/caption-stamp.png") no-repeat 27px 22px;
+  color: #fff;
+  line-height: 1.33;
+  text-shadow: none;
+  font-family: Verdana, "Geneva CY", "DejaVu Sans", sans-serif;
+}
+#slides .caption h1 {
+  font-size: 3em;
+  margin: 0.55em 0 0;
+}
+#slides .caption p {
+  margin: 0.2em 0;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+#slides .caption>* {
+  padding-left: 200px;
+  padding-right: 30px;
+}
