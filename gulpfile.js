@@ -1,3 +1,4 @@
+'use strict';
 var gulp = require('gulp'),
 	browserSync = require('browser-sync'),
 	harp = require('harp'),
@@ -15,7 +16,7 @@ var config = {
 	reload: '{jade,coffee,ejs,md,markdown,json}'
 };
 var locals = JSON.parse(fs.readFileSync('public/_data.json')).index;
-function pack_svg() {
+gulp.task('pack-svg', ()=> {
 	var src = config.icons,
 		dist = config.public.dir+locals.icons.dir;
 	del(dist);
@@ -31,13 +32,25 @@ function pack_svg() {
 		.pipe(
 			gulp.dest(dist)
 		);
-}
-gulp.task('pack-svg', pack_svg);
-gulp.task('serve', function() {
+});
+gulp.task('gh-pages', ()=> {
+	var publisher = require('gulp-gh-pages');
+	return gulp.src('www/**/*')
+		.pipe(publisher({
+			branch: 'master'
+		}));
+});
+gulp.task('compile', ['pack-svg'], (cb)=> {
+	gulp.src('public/images/**/*')
+		.pipe(gulp.dest('www/images/'));
+	harp.compile('public', '../www', ()=> {});
+	return cb();
+});
+gulp.task('serve', ['pack-svg'], ()=> {
 	config.public.files = config.public.dir + '**/';
 	harp.server(config.public.dir, {
 		port: config.port
-	}, function() {
+	}, ()=> {
 		browserSync({
 			proxy: 'localhost:' + config.port,
 			port: config.port + 10,
@@ -46,7 +59,7 @@ gulp.task('serve', function() {
 		});
 		gulp.watch([
 			config.public.files + '*.' + config.inject
-		], function() {
+		], ()=> {
 			reload(
 				config.public.files + '*.css',
 				{stream: true}
@@ -55,11 +68,10 @@ gulp.task('serve', function() {
 		gulp.watch([
 			config.public.files + '*.' + config.reload,
 			'*.' + config.reload
-		], function() {
+		], ()=> {
 			reload();
 		});
 	});
-	pack_svg(gulp, config, del, rename, locals);
 	gulp.watch(
 		config.icons,
 		['pack-svg']
