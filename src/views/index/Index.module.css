@@ -1,0 +1,22 @@
+.root {
+	display: flex;
+	flex-grow: 1;
+	flex-flow: column;
+	height: 100%;
+
+	@media (width <= 30em) {
+		padding-block-start: 1em;
+	}
+
+	@media (width >= 30em) {
+		justify-content: center;
+	}
+}
+
+.title {
+	line-height: 1.1;
+}
+
+.text {
+	padding-inline: 1em;
+}

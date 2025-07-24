@@ -1,0 +1,6 @@
+.telegram {
+	path {
+		transform: scale(1.3);
+		transform-origin: center;
+	}
+}

@@ -1,0 +1,27 @@
+:root {
+	--icon-size: 1.5em;
+}
+
+html {
+	min-height: 100%;
+}
+
+html,
+body {
+	display: flex;
+	flex-grow: 1;
+	flex-flow: column;
+}
+
+svg {
+	display: inline-block;
+}
+
+.tabler-icon {
+	width: var(--icon-size);
+	height: var(--icon-size);
+}
+
+code {
+	font-family: var(--mantine-font-family-monospace);
+}

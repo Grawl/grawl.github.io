@@ -1,0 +1,11 @@
+.root {
+	text-wrap: balance;
+}
+
+.actionIcon {
+	--ai-size: 4em;
+	--icon-size: 2.5em;
+
+	transition: background-color 0.3s;
+	margin-right: 0.5em;
+}

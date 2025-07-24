@@ -1,0 +1,11 @@
+.icon {
+	width: var(--icon-size);
+	height: var(--icon-size);
+
+	&.mono {
+		&,
+		path {
+			fill: currentColor;
+		}
+	}
+}
