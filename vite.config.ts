@@ -7,7 +7,9 @@ import tsConfigPaths from 'vite-tsconfig-paths'
 import { mantineAutoloadCSS } from 'unplugin-mantine-autoload-css'
 
 export default defineConfig(({ mode }) => {
-	const { VITE_SERVER_PORT, VITE_SERVER_HOST } = loadEnv(mode, '')
+	const env = loadEnv(mode, '')
+	console.log({ foo123: env })
+	const { VITE_SERVER_PORT, VITE_SERVER_HOST } = env
 	return {
 		server: {
 			port: Number(VITE_SERVER_PORT),
