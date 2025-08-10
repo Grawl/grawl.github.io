@@ -1,0 +1,23 @@
+html,
+body,
+iframe {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  -webkit-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+nav .btn-group {
+  float: right;
+}
+.brand {
+  color: #000 !important;
+  cursor: default;
+}
+.brand:hover {
+  color: #000 !important;
+}
