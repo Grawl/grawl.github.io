@@ -13,7 +13,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"serve-built": "source .env && serve -l $VITE_SERVER_PORT .output/public",
-		"build-and-serve": "npm run build && npm run serve-static",
+		"build-and-serve": "npm run build && npm run serve-built",
 		"lint-eslint": "eslint",
 		"lint-eslint-fix": "npm run lint-eslint -- --fix",
 		"lint-eslint-errors": "npm run lint-eslint -- --quiet",
