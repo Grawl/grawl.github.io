@@ -7,6 +7,9 @@ export const Route = createFileRoute('/')({
 	component: IndexView,
 	ssr: true,
 	head: () => ({
-		meta: [{ title: indexViewTitle, description: indexViewDescription }],
+		meta: [
+			{ title: indexViewTitle },
+			{ name: 'description', content: indexViewDescription },
+		],
 	}),
 })
