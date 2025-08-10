@@ -13,6 +13,10 @@ jobs:
               with:
                   node-version: 22
                   cache: npm
+            - name: Use repository variable
+              run: |
+                  echo "sadasdasdas: ${{ vars.VITE_SERVER_PORT }}"
+                  echo "12312412444: $VITE_SERVER_PORT"
             - name: Install dependencies
               run: npm install
             - name: build
