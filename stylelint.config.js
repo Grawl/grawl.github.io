@@ -2,8 +2,6 @@
 https://regex101.com/library/WfeFgL
 allowing double dashes (like "foo--bar") and digits
 */
-import { type Config } from 'stylelint'
-
 const kebabRegex = '^_?[a-z0-9]+(?:-+[a-z0-9]+)*$'
 
 /*
@@ -12,20 +10,23 @@ allowing sequential uppercase letters (like "getURL") and digits
 */
 const camelRegex = '^([a-z\\d]+)(([A-Z\\d]+)*([a-z\\d]+)*)*$'
 
-const caseRule =
-	(regex: string, example: string) => (exceptions?: string[]) => [
-		exceptions === undefined
-			? regex
-			: `${regex}|^(${exceptions.join('|')}).*$`,
-		{
-			message: (name?: string) =>
-				`${name === undefined ? 'this' : `"${name}"`} should be written as ${example}`,
-		},
-	]
+/**
+ * @param {string} regex
+ * @param {string} example
+ * @return {(exceptions?: string[]) => [string, { message: (name?: string) => string }]}
+ */
+const caseRule = (regex, example) => exceptions => [
+	exceptions === undefined ? regex : `${regex}|^(${exceptions.join('|')}).*$`,
+	{
+		message: name =>
+			`${name === undefined ? 'this' : `"${name}"`} should be written as ${example}`,
+	},
+]
 const camelCaseRule = caseRule(camelRegex, 'camelCase')
 const kebabCaseRule = caseRule(kebabRegex, 'kebab-case')
 
-const config: Config = {
+/** @type {import('stylelint').Config} */
+const config = {
 	plugins: [
 		'stylelint-prettier',
 		'stylelint-order',

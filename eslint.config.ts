@@ -494,7 +494,7 @@ export default defineConfig(
 	reactRefreshVite,
 	[
 		{
-			ignores: ['src/routeTree.gen.ts'],
+			ignores: ['src/routeTree.gen.ts', 'public/lab'],
 		},
 	],
 )
