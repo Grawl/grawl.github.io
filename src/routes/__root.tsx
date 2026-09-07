@@ -15,6 +15,8 @@ import { Layout } from '~/components/Layout/Layout'
 
 import rootStyles from './root.css?url'
 
+const googleAnalyticsID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID
+
 const RootDocument: FC<PropsWithChildren> = ({ children }) => (
 	<html lang='en'>
 		<head>
@@ -50,6 +52,23 @@ export const Route = createRootRoute({
 			{ rel: 'icon', href: faviconSVG, type: 'image/svg+xml' },
 			{ rel: 'icon', href: faviconICO },
 		],
+		scripts:
+			googleAnalyticsID !== undefined && googleAnalyticsID !== ''
+				? [
+						{
+							src: `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsID}`,
+							async: true,
+						},
+						{
+							children: [
+								'window.dataLayer = window.dataLayer || [];',
+								'function gtag(){dataLayer.push(arguments);}',
+								"gtag('js', new Date());",
+								`gtag('config', '${googleAnalyticsID}');`,
+							].join('\n'),
+						},
+					]
+				: [],
 	}),
 	component: RootComponent,
 })
