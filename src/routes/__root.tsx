@@ -15,6 +15,8 @@ import { Layout } from '~/components/Layout/Layout'
 
 import rootStyles from './root.css?url'
 
+const googleAnalyticsID = 'G-LF500893KY'
+
 const RootDocument: FC<PropsWithChildren> = ({ children }) => (
 	<html lang='en'>
 		<head>
@@ -49,6 +51,20 @@ export const Route = createRootRoute({
 			{ rel: 'stylesheet', href: rootStyles },
 			{ rel: 'icon', href: faviconSVG, type: 'image/svg+xml' },
 			{ rel: 'icon', href: faviconICO },
+		],
+		scripts: [
+			{
+				src: `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsID}`,
+				async: true,
+			},
+			{
+				children: [
+					'window.dataLayer = window.dataLayer || [];',
+					'function gtag(){dataLayer.push(arguments);}',
+					"gtag('js', new Date());",
+					`gtag('config', '${googleAnalyticsID}');`,
+				].join('\n'),
+			},
 		],
 	}),
 	component: RootComponent,
